@@ -19,7 +19,10 @@ the App Store, but would work if you are developing apps for internal use.
 ##How to use it?
 
 If you want to play around, just dump MMAppSwitcher.h and MMAppSwitcher.m
-into your project or use the attached podspec.
+into your project or even simpler, use CocoaPods and add `MMAppSwitcher`
+to your Podfile:
+	
+	pod 'MMAppSwitcher'
 
 In the class that will be providing the card view:
 
@@ -35,9 +38,10 @@ The protocol just has one single method that you need to implement:
     -(UIView *)appSwitcher:(MMAppSwitcher *)appSwitcher viewForCardWithSize:(CGSize)size;
 
 
-Whenever the app enters the background, the card will be added to your app's
-view hierarchy and presented in the app switcher. When the app is launched,
-the card view is automatically dismissed again.
+Whenever the app enters the background, your custom card view will be queried
+and added to your app's view hierarchy and subsequently presented in the app
+switcher. When the app is launched, the card view is automatically dismissed
+again.
 
 If your app supports one of iOS7's [background modes][3], you can refresh your
 card view by calling `[[MMAppSwitcher sharedInstance] setNeedsUpdate]` whenever
@@ -51,7 +55,8 @@ example be
 
 If your app supports push notifications, iOS7 now also allows you to send
 silent push notifications that will wake your app up, but keep it in the
-background.
+background. This should enable you to control card updates remotely
+(at least if you don't excessively do it and get throttled).
 
 
 ##Attribution
