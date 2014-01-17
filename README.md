@@ -2,7 +2,8 @@
 This simple class allows you to replace the default scaled down app interface 
 in the iOS7 app switcher with your own customized card view.
 
-It's a demo of the idea outlined in [this blog post][1].
+It's a demo of the idea outlined in [this blog post][1] and is part of the
+upcoming [ClockShots time tracking app](http://clockshots.com).
 
 
 ----
