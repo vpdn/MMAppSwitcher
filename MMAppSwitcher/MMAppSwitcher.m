@@ -39,7 +39,7 @@ static MMAppSwitcher *_sharedInstance;
     return _sharedInstance;
 }
 
-- (void)setDatasource:(id<MMAppSwitcherDataSource>)dataSource {
+- (void)setDataSource:(id<MMAppSwitcherDataSource>)dataSource {
     _datasource = dataSource;
     if (_datasource) {
         [self enableNotifications];

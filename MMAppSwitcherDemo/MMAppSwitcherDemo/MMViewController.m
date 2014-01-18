@@ -28,7 +28,7 @@
     [self setupTable];
     self.trackedDurations = @[];
     self.cardView = [MMAppSwitcherDemoCardView new];
-    [[MMAppSwitcher sharedInstance] setDatasource:self];
+    [[MMAppSwitcher sharedInstance] setDataSource:self];
 }
 
 - (void)setupDate {

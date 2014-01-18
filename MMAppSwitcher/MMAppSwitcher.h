@@ -26,7 +26,7 @@
  * @param dataSource The object that will be responsible for returning
  * the app switcher's card view.
  **/
-- (void)setDatasource:(id<MMAppSwitcherDataSource>)dataSource;
+- (void)setDataSource:(id<MMAppSwitcherDataSource>)dataSource;
 
 /**
  * Invalidates the current card view and forces a reload.
