@@ -65,8 +65,8 @@ background. This should enable you to control card updates remotely
 Thanks to the following designers and [The Noun Project][2] for
 unuglifying the demo with their awesome icons:
 - Box icon designed by Travis J. Lee from the Noun Project
-- Brief case icon designed by (Al D)[http://thenounproject.com/albertine3/]
-- Clock icon designed by (Travis Yunis)[https://twitter.com/mryunis]
+- Brief case icon designed by [Al D][]
+- Clock icon designed by [Travis Yunis][]
 
 
 
@@ -78,3 +78,5 @@ unuglifying the demo with their awesome icons:
 [separator]: http://vpdn.github.io/images/2014-01-16_TimeBox/separator.png
 [default screen]: http://vpdn.github.io/images/2014-01-16_TimeBox/timbox_main_screen.png
 [checked in screen]: http://vpdn.github.io/images/2014-01-16_TimeBox/timbox_card_checked_in.png
+[Al D]: http://thenounproject.com/albertine3/
+[Travis Yunis]: https://twitter.com/mryunis
