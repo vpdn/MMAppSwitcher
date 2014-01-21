@@ -50,7 +50,7 @@ static MMAppSwitcher *_sharedInstance;
 
 - (void)enableNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterBackground) name:@"UIApplicationWillBeginSuspendAnimationNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
 - (void)disableNotifications {
@@ -109,7 +109,7 @@ static MMAppSwitcher *_sharedInstance;
     [[UIApplication sharedApplication] setStatusBarHidden:self.showStatusBar];
 }
 
-- (void)appWillEnterBackground {
+- (void)appDidEnterBackground {
      self.showStatusBar = [[UIApplication sharedApplication] isStatusBarHidden];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self loadCard];
