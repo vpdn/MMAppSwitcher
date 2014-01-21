@@ -1,6 +1,6 @@
 //
 //  MMAppSwitcher.m
-//  PunchCard
+//  ClockShots
 //
 //  Created by Vinh Phuc Dinh on 23.11.13.
 //  Copyright (c) 2013 Mocava Mobile. All rights reserved.
