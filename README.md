@@ -60,6 +60,11 @@ background. This should enable you to control card updates remotely
 (at least if you don't excessively do it and get throttled).
 
 
+##Known issues
+
+- The custom switcher view does not show up on the iOS simulator. To see your custom view, you have to test the app on a real device.
+
+
 ##Attribution
 
 Thanks to the following designers and [The Noun Project][2] for
