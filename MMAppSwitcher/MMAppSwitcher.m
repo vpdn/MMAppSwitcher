@@ -15,7 +15,7 @@
 
 @interface MMAppSwitcher()
 
-@property (nonatomic, weak) id<MMAppSwitcherDataSource> datasource;
+@property (nonatomic, weak) id<MMAppSwitcherDataSource> dataSource;
 @property (nonatomic, strong) UIView *view;
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) UIWindow *originalWindow;
@@ -40,12 +40,12 @@ static MMAppSwitcher *_sharedInstance;
 }
 
 - (void)setDataSource:(id<MMAppSwitcherDataSource>)dataSource {
-    _datasource = dataSource;
-    if (_datasource) {
-        [self enableNotifications];
-    } else {
+    if (_dataSource!=nil && dataSource==nil) {
         [self disableNotifications];
+    } else if (_dataSource==nil && dataSource!=nil) {
+        [self enableNotifications];
     }
+    _dataSource = dataSource;
 }
 
 - (void)enableNotifications {
@@ -58,8 +58,8 @@ static MMAppSwitcher *_sharedInstance;
 }
 
 - (void)loadCard {
-    if ([self.datasource respondsToSelector:@selector(appSwitcher:viewForCardWithSize:)]) {
-        UIView *view = [self.datasource appSwitcher:self viewForCardWithSize:[self cardSizeForCurrentOrientation]];
+    if ([self.dataSource respondsToSelector:@selector(appSwitcher:viewForCardWithSize:)]) {
+        UIView *view = [self.dataSource appSwitcher:self viewForCardWithSize:[self cardSizeForCurrentOrientation]];
         if (view) {
             [self.view removeFromSuperview];
             UIImageView *cardView = [view mm_rasterizedView];
