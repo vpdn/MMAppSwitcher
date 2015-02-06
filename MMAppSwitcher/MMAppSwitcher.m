@@ -33,7 +33,7 @@ static MMAppSwitcher *_sharedInstance;
         _sharedInstance = [MMAppSwitcher new];
         _sharedInstance.originalWindow = [[UIApplication sharedApplication] keyWindow];
         _sharedInstance.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        _sharedInstance.window.backgroundColor = [UIColor blackColor];
+        _sharedInstance.window.backgroundColor = [UIColor clearColor];
         _sharedInstance.window.windowLevel = UIWindowLevelStatusBar;
     });
     return _sharedInstance;
