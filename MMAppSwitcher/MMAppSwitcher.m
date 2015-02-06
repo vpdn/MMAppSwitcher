@@ -40,12 +40,12 @@ static MMAppSwitcher *_sharedInstance;
 }
 
 - (void)setDataSource:(id<MMAppSwitcherDataSource>)dataSource {
-    if (_dataSource!=nil && dataSource==nil) {
-        [self disableNotifications];
-    } else if (_dataSource==nil && dataSource!=nil) {
-        [self enableNotifications];
-    }
     _dataSource = dataSource;
+    if (_dataSource) {
+        [self enableNotifications];
+    } else {
+        [self disableNotifications];
+    }
 }
 
 - (void)enableNotifications {
