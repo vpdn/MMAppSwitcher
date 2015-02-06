@@ -111,9 +111,13 @@ static MMAppSwitcher *_sharedInstance;
 
 - (void)appDidEnterBackground {
      self.showStatusBar = [[UIApplication sharedApplication] isStatusBarHidden];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self loadCard];
-    self.window.hidden = NO;
+    if (self.view) {
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        self.window.hidden = NO;
+    } else {
+        self.window.hidden = YES;
+    }
 }
 
 @end
